@@ -1,0 +1,16 @@
+api:
+  build: ./
+  ports:
+    - 9550:5000
+  volumes:
+    - ./:/go/src/exercises/addressapi
+
+  links:
+    - database
+
+  environment:
+    - DB_NAME=addressbook
+
+database:
+  image: mongo:latest
+  command: mongod --smallfiles --quiet --logpath=/dev/null
