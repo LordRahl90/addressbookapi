@@ -1,9 +1,10 @@
 package handlers
 
 import (
-	"exercises/addressapi/services"
 	"fmt"
 	"net/http"
+
+	"github.com/LordRahl90/addressapi/services"
 )
 
 //Index this function lists all the availaible contacts

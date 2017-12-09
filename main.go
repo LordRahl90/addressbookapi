@@ -1,10 +1,11 @@
 package main
 
 import (
-	"exercises/addressapi/handlers"
 	"fmt"
 	"log"
 	"net/http"
+
+	"github.com/LordRahl90/addressapi/handlers"
 )
 
 func main() {

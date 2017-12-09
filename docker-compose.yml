@@ -3,7 +3,7 @@ api:
   ports:
     - 9550:5000
   volumes:
-    - ./:/go/src/exercises/addressapi
+    - ./:/go/src/github.com/LordRahl90/addressbookapi
 
   links:
     - database
