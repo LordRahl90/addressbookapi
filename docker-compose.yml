@@ -1,7 +1,7 @@
 api:
   build: ./
   ports:
-    - 9550:5000
+    - 9500:5000
   volumes:
     - ./:/go/src/github.com/LordRahl90/addressbookapi
 

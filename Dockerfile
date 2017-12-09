@@ -3,17 +3,18 @@ FROM golang:latest
 MAINTAINER Alugbin LordrAhl Abiodun Olutola
 
 #add the codebase to the container workspace
-ADD . /go/src/github.com/LordRahl90/addressbookapi
+ADD . /go/src/github.com/LordRahl90/addressapi
 
 
-RUN go get labix.org/v2/mgo  
-RUN go get labix.org/v2/mgo/bson
+RUN go get gopkg.in/mgo.v2
+RUN go get gopkg.in/mgo.v2/bson
 
 
 #installs the app binary locally on the container
-RUN go install github.com/LordRahl90/addressbookapi
+RUN go install github.com/LordRahl90/addressapi
 
 #binary ENTRYPOINT [ "executable" ]
-ENTRYPOINT /go/bin/addressbookapi
+ENTRYPOINT /go/bin/addressapi
 
+#expose this endpoint to us
 EXPOSE 5000
